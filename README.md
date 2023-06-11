@@ -17,6 +17,11 @@
      figure() - cria uma janela;
 
      imshow() - plota na tela a imagem;
+     
+     imwrite() - Salva no disco
+     
+     t = tic;
+     toc(t); - Calcula tempo de execução de um bloco de instrução
 
 ## Sintaxe
 
