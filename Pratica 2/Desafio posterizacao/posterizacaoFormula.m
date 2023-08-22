@@ -12,7 +12,7 @@ imPosterizada = uint8(zeros(512,512));
 x = round(255/N);
 y = round(255/(N-1));
 
-imPosterizada(:,:) = y*(round(im(:,:)-(x/N))/(y*0.8));
+imPosterizada(:,:) = y*(round(im(:,:)-round((x/N)/1.8))/(y*0.8));
 
 figure('Name', 'Imagem posterizada');
 imshow(imPosterizada);
