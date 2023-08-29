@@ -8,21 +8,10 @@ pkg load image;
 im = imread('lake.png');
 
 vetorIntensidade = imhist(im);
-qtdIntensidades = 0;
-p = 0;
-cont = 0;
 
-for ( i = 1 : 1 : 256)
-    if(vetorIntensidade(i,1) != 0)
-      qtdIntensidades++;
-      if(cont == 0)
-        p = vetorIntensidade(i,1);
-        cont++;
-      endif
-    endif
-endfor
-
-k = round(255/(qtdIntensidades-1))+1;
+qtd = sum(vetorIntensidade != 0);
+k = round(255/(qtd-1))+1;
+p = find(vetorIntensidade != 0,1);
 
 im = (im-p)*k;
 
