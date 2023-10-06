@@ -97,4 +97,3 @@ distanciaPontosKm = ((distanciaPontos*10)/diametroMetrica)
 
 figure(1);
 imshow(im);
-plot(line([x1, x2], [y1, y2], 'Color', 'red', 'LineWidth', 2));
