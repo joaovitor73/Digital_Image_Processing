@@ -56,7 +56,7 @@ diametroMetrica = sqrt(power(x2-x1,2)+power(y2-y1,2))
 
 maskR = im(:,:,1) > 150;
 flag = false;
-
+%Pegando o primeiro pixel dos pontos
 for(i = 1:  inicioX)
   for(j = 1 : fimY)
     if(maskR(i,j) == 1)
@@ -75,7 +75,7 @@ endfor
 
 
 flag = false;
-%Pegando o ultimo pixel da metrica
+%Pegando o ultimo pixel dos pontos
 for(i = inicioX : -1 : 1)
   for(j = inicioY : -1 : 1)
     if(maskR(i,j) == 1)
@@ -92,7 +92,9 @@ for(i = inicioX : -1 : 1)
   endif
 endfor
 
+%Distancia entre os pontos
 distanciaPontos = sqrt(power(x4-x3,2)+power(y4-y4,2))
+%Distancia em dos pontos em km
 distanciaPontosKm = ((distanciaPontos*10)/diametroMetrica)
 
 figure(1);
