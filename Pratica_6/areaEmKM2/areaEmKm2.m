@@ -96,9 +96,8 @@ endfor
 distanciaPontos = sqrt(power(x4-x3,2)+power(y4-y3,2))
 %Distancia em dos pontos em km
 distanciaPontosKm = ((distanciaPontos*10)/diametroMetrica)
-alturaPontos = sqrt(power(x4-x4,2)+power(y4-y3,2))
-larguraPontos = sqrt(power(x4-x3,2)+power(y4-y4,2))
+alturaPontos = ((sqrt(power(x4-x4,2)+power(y4-y3,2)))*10)/diametroMetrica
+larguraPontos = ((sqrt(power(x4-x3,2)+power(y4-y4,2)))*10)/diametroMetrica
 areaPontosKm2 = alturaPontos*larguraPontos
 figure(1);
 imshow(im);
-
