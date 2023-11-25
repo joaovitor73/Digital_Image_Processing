@@ -39,11 +39,13 @@ EE = double([0,1,0;1,-4,1;0,1,0]);
 #Filtro de Emboss 
 #EE = double([-2,-1,0;-1,1,1;0,1,2]);
 
+imSaida = im;
+
 for i = 2  :height-1
    for j = 2 : width-1
         viz = (double(im(i-1:i+1, j-1:j+1))).*EE;
-        imSobelVer(i,j) = sum(sum(viz));
+        imSaida(i,j) = sum(sum(viz));
     endfor
 endfor
 
-figure, imshow(uint8(imSobelVer));
+figure, imshow(imSaida);
