@@ -29,6 +29,7 @@ erros = []; %Vetor que vai guardar duvidas unicas
 flag = true;
 im = mask;
 
+%Procura duvidas na rotulagem
 for (i = 1 : height)
   for (j = 1 : width)
     if(im(i,j) && (i-1 > 0) && (j-1 > 0) && (i+1 <= width)) %Pixel da vez e branco
