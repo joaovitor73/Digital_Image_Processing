@@ -7,8 +7,8 @@ im = imread('objetos.jpg');
 height = size(im,1);
 width = size(im,2);
 
-mask = im(:,:,1) > 100;
-#mask = im> 100;
+%mask = im(:,:,1) > 100;
+mask = im> 100;
 imSaida = uint8(zeros(height,width));
 
 %Guarda apenas duvidas unicas
