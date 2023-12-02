@@ -57,11 +57,11 @@ imSaida(1, size(imSaida,2)) = im(1, width);
 imSaida(size(imSaida,1),1) = im(height,1);
 imSaida(size(imSaida,1), size(imSaida,2)) = im(height, width);
 
-for i = 2  :height-1
-   for j = 2 : width-1
-        viz = (double(im(i-1:i+1, j-1:j+1,1))).*EE;
-        imSaida(i,j) = sum(sum(viz));
+for i = 2  :size(imSaida,1)-1
+   for j = 2 : size(imSaida,2) - 1
+        viz = (double(imSaida(i-1:i+1, j-1:j+1,1))).*EE;
+        im(i-1,j-1) = sum(sum(viz));
     endfor
 endfor
 
-figure, imshow(imSaida);
+figure, imshow(im);
